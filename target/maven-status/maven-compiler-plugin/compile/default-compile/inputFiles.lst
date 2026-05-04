@@ -1,0 +1,17 @@
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\model\ProcesVerbal.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\util\FileUploadUtil.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\model\Affectation.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\controller\AffectationServlet.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\util\ExcelWriter.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\model\ConfigurationSoutenance.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\model\PlanningSoutenance.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\util\ConfigurationReader.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\service\PlanningService.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\util\ExcelReader.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\service\ProcesVerbalService.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\model\Etudiant.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\dao\EtudiantDAO.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\controller\DownloadServlet.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\model\Professeur.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\service\AffectationService.java
+C:\Users\e\workspace-pfe\pfe-affectation\src\main\java\com\ensa\dao\ProfesseurDAO.java

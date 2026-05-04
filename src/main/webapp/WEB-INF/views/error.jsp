@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee 
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    
+    <display-name>PFE Affectation System</display-name>
+    
+    <welcome-file-list>
+        <welcome-file>WEB-INF/views/index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    
+    <error-page>
+        <exception-code>404</exception-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <exception-code>500</exception-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+</web-app>
