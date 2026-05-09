@@ -13,13 +13,9 @@ public class Etudiant {
     // Constructeurs
     public Etudiant() {}
     
-    public Etudiant(String cne, String nom, String prenom, String emailPersonnel, 
-                    String emailAcademique, String filiere) {
-        this.cne = cne;
+    public Etudiant(String nom, String prenom, String filiere) {
         this.nom = nom;
         this.prenom = prenom;
-        this.emailPersonnel = emailPersonnel;
-        this.emailAcademique = emailAcademique;
         this.filiere = filiere;
     }
     
@@ -48,16 +44,12 @@ public class Etudiant {
     public String getEncadrantPrenom() { return encadrantPrenom; }
     public void setEncadrantPrenom(String encadrantPrenom) { this.encadrantPrenom = encadrantPrenom; }
     
-    // Cette méthode est essentielle pour le PlanningService
-    public String getEncadrantComplet() {
-        if (encadrantNom != null && encadrantPrenom != null) {
-            return encadrantPrenom + " " + encadrantNom;
-        }
-        return "";
+    public String getNomComplet() { 
+        return prenom + " " + nom; 
     }
     
     @Override
     public String toString() {
-        return cne + " - " + prenom + " " + nom + " (" + filiere + ")";
+        return getNomComplet() + " (" + filiere + ")";
     }
 }

@@ -5,159 +5,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planning - ENSA Al Hoceima</title>
+    <title>Planning généré - ENSA Al Hoceima</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f5f5;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .ensa-header {
-            background: #0033a0;
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .logo-icon {
-            font-size: 2rem;
-        }
-        
-        .title-container h1 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin: 0;
-        }
-        
-        .main-content {
-            flex: 1;
-            padding: 2rem 0;
-        }
-        
-        .alert-success-custom {
-            background: #e8f0fe;
-            border-left: 4px solid #0033a0;
-            color: #0033a0;
-            padding: 1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .btn-download {
-            background: #0033a0;
-            color: white;
-            border: none;
-            padding: 0.6rem 1.5rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .btn-download:hover {
-            background: #002a86;
-            transform: translateY(-2px);
-        }
-        
-        .btn-retour {
-            background: white;
-            color: #0033a0;
-            border: 1px solid #0033a0;
-            padding: 0.6rem 1.5rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .btn-retour:hover {
-            background: #f0f4ff;
-        }
-        
-        .ensa-footer {
-            background: #0033a0;
-            color: white;
-            padding: 1.5rem 0;
-            margin-top: auto;
-            text-align: center;
-            font-size: 0.8rem;
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        body { background: #f5f7fa; font-family: 'Segoe UI', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+        .main-content { flex: 1; padding: 50px 0; }
+        .page-title { text-align: center; margin-bottom: 40px; }
+        .page-title h2 { color: #0033a0; font-size: 1.8rem; font-weight: 600; }
+        .stat-card { background: white; border-radius: 16px; padding: 20px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .stat-value { font-size: 2rem; font-weight: 700; color: #0033a0; }
+        .btn-download { background: #28a745; color: white; padding: 12px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; margin: 10px; }
+        .btn-download:hover { background: #218838; transform: translateY(-2px); color: white; }
+        .btn-retour { background: #0033a0; color: white; padding: 12px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; margin: 10px; }
+        .btn-retour:hover { background: #002a86; transform: translateY(-2px); color: white; }
+        .alert-success-custom { background: #eaf7ee; border-left: 4px solid #28a745; padding: 12px 16px; border-radius: 10px; margin-bottom: 30px; }
+        .download-box { background: white; border-radius: 16px; padding: 30px; text-align: center; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <header class="ensa-header">
-        <div class="container">
-            <div class="logo-container">
-                <div class="logo-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="title-container text-center">
-                    <h1>ENSA AL HOCEIMA</h1>
-                    <p>Département Mathématiques et Informatique</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
+    <%@ include file="/header.jsp" %>
+    
     <div class="main-content">
-        <div class="container fade-in">
-            <div class="alert-success-custom">
-                <i class="fas fa-check-circle me-2"></i>
-                <strong>Planning généré avec succès !</strong> Le planning des soutenances a été créé.
+        <div class="container">
+            <div class="page-title">
+                <h2><i class="bi bi-calendar-check-fill me-2"></i> Planning généré avec succès</h2>
             </div>
             
-            <div class="row">
-                <div class="col-md-6 mx-auto text-center">
-                    <div class="card border-0 shadow-sm" style="border-radius: 4px;">
-                        <div class="card-body">
-                            <i class="fas fa-calendar-alt" style="font-size: 3rem; color: #0033a0;"></i>
-                            <h4 class="mt-3">Planning des Soutenances</h4>
-                            <p class="text-muted">Fichier Excel avec toutes les soutenances planifiées</p>
-                            <a href="uploads/planning_${timestampPlanning}.xlsx" class="btn-download" style="display: inline-block;">
-                                <i class="fas fa-download me-2"></i>Télécharger le Planning
-                            </a>
-                        </div>
+            <div class="alert-success-custom text-center">
+                <strong>Planning des soutenances généré !</strong>
+            </div>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-value">${totalSoutenances}</div>
+                        <small>Soutenances</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-value">${nbJours}</div>
+                        <small>Jours</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-value">${nbSalles}</div>
+                        <small>Salles utilisées</small>
                     </div>
                 </div>
             </div>
             
-            <div class="text-center mt-4">
-                <a href="${pageContext.request.contextPath}/affectation?page=accueil" class="btn-retour">
-                    <i class="fas fa-home me-2"></i>Retour à l'accueil
+            <div class="download-box">
+                <a href="${pageContext.request.contextPath}/download?file=${fileName}" class="btn-download" target="_blank">
+                    <i class="bi bi-file-earmark-excel-fill me-2"></i> Télécharger le planning
+                </a>
+                <a href="${pageContext.request.contextPath}/planning" class="btn-retour">
+                    <i class="bi bi-arrow-repeat me-2"></i> Nouveau planning
                 </a>
             </div>
         </div>
     </div>
-
-    <footer class="ensa-footer">
-        <div class="container">
-            <p class="mb-0">© 2024 - ENSA Al Hoceima | Planification des Soutenances PFE</p>
-        </div>
-    </footer>
+    
+    <%@ include file="/footer.jsp" %>
 </body>
 </html>
